@@ -1,0 +1,1 @@
+The GET method is not supported for this route. Supported methods: PUT, DELETE.
