@@ -19,7 +19,7 @@
 </head>
 <body>
     <table width='100%'>
-<tr><td><b>{{$date}}</b></td><td style='text-align:center'><img src='{{$logo}}' width='100px'/></td><td style='text-align:right'><h3 >Allocation Notice</h3></td></tr>
+<tr><td><b>{!!$date!!}</b></td><td style='text-align:center'><img src='{{$logo}}' width='100px'/></td><td style='text-align:right'><h3 >Allocation Notice</h3></td></tr>
     </table>
 
 <p>{!!$project_address!!}</p>
