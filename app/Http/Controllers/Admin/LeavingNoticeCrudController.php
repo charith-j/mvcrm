@@ -45,6 +45,9 @@ class LeavingNoticeCrudController extends CrudController
         $date=date_create($request->get('date_of_removal'));
         $date = date_format($date,"d F Y");
         $in['date_of_removal'] = $date;
+
+
+
         $in['copy_to'] = $request->get('copy_to');
         $this->generatePDF($id + 1, $in);
         // do something after save
@@ -249,6 +252,12 @@ class LeavingNoticeCrudController extends CrudController
         
         $informed_by = LeavingNotice::find($id);
         $user =  User::find($informed_by->user_id);
+
+        
+        $date=date_create($child1->dob);
+        $date = date_format($date,"d F Y");
+        $dob = $date;
+        
         //dd($informed_by);
         $data = [
             'reference_number' => 'REF/LEAVINGNOTICE/'.$id,
@@ -256,7 +265,7 @@ class LeavingNoticeCrudController extends CrudController
             'date' => $in['date'],
             'logo' => base_path('storage/photos/mv_logo.png'),
             'name' => $child1->name,
-            'dob' => $child1->dob,
+            'dob' => $dob,
             'project' => implode(', ', $project1),
             'project_number' => implode(', ', $project_number), 
             'sponsor' => implode(', ', $sponsor1),

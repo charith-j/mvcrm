@@ -43,7 +43,7 @@
 </tr>
 <tr>
 <td><h3>Date of Birth</h3></td>
-<td>{{$dob}}</td>
+<td>{!!$dob!!}</td>
 </tr>
 <tr>
 <td><h3>Project</h3></td>
@@ -76,7 +76,7 @@
 
 <tr>
 <td><h3>Date of Removal</h3></td>
-<td>{{$date_of_removal}}</td>
+<td>{!!$date_of_removal!!}</td>
 </tr>
 <tr>
 <td><h3>Informed By</h3></td>
